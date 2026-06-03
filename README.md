@@ -1,58 +1,61 @@
-# ATM Simulation
+# Advanced ATM Simulation
 
-A desktop ATM simulation built with Python. Uses Tkinter for the UI and SQLite to persist account data and transaction history across sessions.
+A powerful ATM simulation application built with Python using the `Tkinter` library for the Graphical User Interface (GUI) and `SQLite3` for database management.
 
-## What it does
+## Features
 
-- Login with an account number and PIN
-- Register new accounts from the login screen
-- Check balance, deposit, withdraw
-- Transfer funds to other accounts
-- Change your PIN
-- View last 15 transactions
-- Full input validation + error messages
+- **User Authentication**: Secure login system using Account Number and PIN.
+- **Account Registration**: Create new user accounts dynamically from the login screen!
+- **Check Balance**: View real-time current balance.
+- **Deposit & Withdraw Funds**: Modify your balance securely with input validation.
+- **Transfer Funds**: Send money instantly to any other existing account in the database.
+- **Change PIN**: Update your security PIN securely.
+- **Mini Statement**: View your transaction history (last 15 deposits, withdrawals, transfers).
+- **Logout Functionality**: Safely logout and clear user session.
+- **Error Handling**: Full input validation for all inputs.
 
----
-## Project structure
+## Project Structure
 
-```
-├── atm.py          # main app
-├── create_db.py    # db setup + sample user
-├── atm.db          # generated after running create_db.py
-```
+- `atm.py`: The main OOP script that handles multiple frames and runs the Tkinter ATM GUI.
+- `create_db.py`: A setup script to initialize the SQLite database, transactions table, and create a sample user.
+- `atm.db`: SQLite database file (generated after running `create_db.py`).
 
----
+## Prerequisites
 
-## Getting started
+- Python 3.x installed on your system.
 
-**1. Initialize the database**
-```bash
-python create_db.py
-```
+## Setup Instructions
 
-**2. Run the app**
-```bash
-python atm.py
-```
+1. **Initialize Database**:
+   Run the `create_db.py` script to generate the database with the required tables and a sample user.
+   ```bash
+   python create_db.py
+   ```
 
-No external dependencies. Just Python 3.
+2. **Run the Application**:
+   Run the main application script `atm.py`.
+   ```bash
+   python atm.py
+   ```
 
----
+## Default Sample Credentials
 
-## Test account
+After running `create_db.py`, a default user is created to test the application:
 
-```
-Account Number : 123456
-PIN            : 1234
-Balance        : ₹10,000
-```
+- **Account Number**: `123456`
+- **PIN**: `1234`
+- **Initial Balance**: `₹10,000`
 
-Or click **Create New Account** on the login screen to register your own.
+## How to Use
 
----
+1. Launch the app.
+2. Either use the sample credentials to **Login**, or click **Create New Account** to register your own custom account (like `12107721`)!
+3. On the Main Menu, you can check your balance, view your mini statement, transfer funds, or change your PIN.
+4. You can also use the **Quick Transactions** section to deposit or withdraw money.
+5. Click **Logout** to end the session safely.
 
-## Stack
+## Technologies Used
 
-- Python 3
-- Tkinter
-- SQLite3
+- **Python**: Core programming language.
+- **Tkinter**: Python's standard GUI library with OOP integration.
+- **SQLite3**: Relational database for persistent storage.
